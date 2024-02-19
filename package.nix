@@ -2,13 +2,13 @@
 
 tcl.mkTclDerivation rec {
   pname = "imunes";
-  version = "2.3.0";
+  version = "2.4.0";
 
   src = fetchFromGitHub {
     owner = "imunes";
     repo = "imunes";
     rev = "v${version}";
-    hash = "sha256-Qf5u4oHnsJLGpDPRGSYbxDICL8MWiajxFb5/FADLfqc=";
+    hash = "sha256-6reA4mh5Ub8phz6v4wrlcDeEg3Ycn96i95ZUROtnHhU=";
   };
 
   buildFlags = ["all"];
@@ -29,4 +29,8 @@ tcl.mkTclDerivation rec {
     tcllib
     tk
   ];
+
+  meta = {
+    maintainers = [ lib.maintainers.maxhearnden];
+  };
 }

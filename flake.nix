@@ -13,9 +13,6 @@
         docker = {
           enable = true;
         };
-        vswitch = {
-          enable = true;
-        };
       };
     };
     packages = lib.mapAttrs (system: pkgs: {
